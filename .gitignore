@@ -1,0 +1,38 @@
+# === Rust build ===
+/target/
+/Cargo.lock
+
+# === IDEs and editors ===
+*.swp
+*.swo
+*.sublime*
+.vscode/
+.idea/
+*.code-workspace
+
+# === OS Stuff ===
+.DS_Store
+Thumbs.db
+
+# === Logs and backups ===
+*.log
+*.bak
+*.tmp
+
+# === Rust build tools ===
+/raylib/
+*.rs.bk
+
+# === bindgen / CMake cache (if manually building C deps) ===
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+Makefile
+build/
+*.o
+*.a
+*.so
+*.dylib
+*.dll
+*.exe
+
