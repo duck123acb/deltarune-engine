@@ -13,16 +13,18 @@ fn main() {
 
     let texture = rl.load_texture(&thread, "assets/sprites/kris.png").unwrap();
     let position = Vector2::new(350.0, 280.0);
+    let box_width = (texture.width / 16) as f32;
     let mut frame_rec = Rectangle::new(
         0.0,
-        0.0,
-        132.0,
-        132.0,
+        box_width * 4.0,
+        box_width,
+        box_width,
     );
 
     let mut frame_counter = 0;
     let mut frame_index = 0;
-    let frames_speed = 8;
+    let frames_speed = 18;
+    let anim_frames = 6;
 
     // Main game loop
     while !rl.window_should_close() {
@@ -32,12 +34,12 @@ fn main() {
             frame_counter = 0;
             frame_index += 1;
 
-            if frame_index > 7 {
+            if frame_index > anim_frames {
                 frame_rec.x = 0.0;
                 frame_index = 0;
             }
             else {
-                frame_rec.x += 132.0;
+                frame_rec.x += box_width;
             }
         }
 
