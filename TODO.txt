@@ -1,0 +1,11 @@
+GameObject
+├── Character
+│   ├── PartyMember
+│   └── Enemy
+└── Soul
+└── Particles
+└── BattleManager
+
+Engine
+├── Sprite
+└── Sound
