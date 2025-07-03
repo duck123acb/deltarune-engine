@@ -14,7 +14,7 @@ LIBS = -lraylib -ldl -lGL -lm -lpthread -lrt -lX11
 
 # Targets
 TARGET = main
-SRC = src/main.cpp
+SRC = src/main.cpp $(wildcard src/engine/*.cpp)
 
 # Default rule
 all: $(TARGET)

@@ -1,4 +1,5 @@
 #include "sprite.hpp"
+#include <iostream>
 
 Animation::Animation(int speed, int frames)
 	: frameCounter(0),
@@ -7,25 +8,27 @@ Animation::Animation(int speed, int frames)
 	frames(frames)
 {}
 
-Sprite(float x, float y, const char* texturePath, float boxLength, int row, int collumn);
+Sprite::Sprite(float x, float y, const char* texturePath, float boxLength, int row, int column)
     : texture(LoadTexture(texturePath)),
       position({ x, y }),
-      frameRec({ row * boxLength, collumn * boxLength, boxLength, boxLength })
+      frameRec({ row * boxLength, column * boxLength, boxLength, boxLength }),
+      boxLength(boxLength)
 {}
 
-Sprite::Animate(Animation animation) {
+void Sprite::Animate(Animation& animation) {
 	animation.frameCounter++;
+
 	if (animation.frameCounter >= (60 / animation.speed)) {
 		animation.frameCounter = 0;
 		animation.frameIndex++;
 
 		if (animation.frameIndex >= animation.frames)
-			frameIndex = 0;
+			animation.frameIndex = 0;
                 
-		frameRec.x = frameIndex * boxLength;
+		frameRec.x = animation.frameIndex * boxLength;
 	}
 
 }
-Sprite::Draw() {
+void Sprite::Draw() {
 	DrawTextureRec(texture, frameRec, position, WHITE);
 }
