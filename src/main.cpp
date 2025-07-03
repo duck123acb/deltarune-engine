@@ -1,5 +1,7 @@
 #include "raylib.h"
 
+#include "engine/sprite.hpp"
+
 int main() {
 	InitWindow(640, 480, "Deltarune Engine");
 	SetWindowState(FLAG_VSYNC_HINT);
