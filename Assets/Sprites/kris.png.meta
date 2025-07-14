@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -116,12 +116,12 @@ TextureImporter:
       name: kris_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1185
-        height: 4522
+        x: 6
+        y: 898
+        width: 19
+        height: 37
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -134,11 +134,1551 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: kris_1
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 897
+        width: 19
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41bae3f8b35d54c05ba76fcceef3db75
+      internalID: 1003046048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kris_2
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 898
+        width: 19
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84f400d89e64f4b9bb13a1f5b53e6c1f
+      internalID: -342919003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kris_3
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 897
+        width: 19
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d466b1c8afcd4ed5967fd8620adf1df
+      internalID: 963474094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kris_4
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 854
+        width: 19
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc74653c0958c443691f1be8294ac7c4
+      internalID: -1377681200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kris_5
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 854
+        width: 19
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 251749ea9ec004f0e90f471c85fe8537
+      internalID: -835487875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kris_6
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 854
+        width: 19
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fda078c842164eb0a282ab50858b8e6
+      internalID: 637220759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kris_7
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 854
+        width: 19
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70828bfb970324bbf90b0cc783d62de4
+      internalID: 1774169561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kris_8
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 810
+        width: 19
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd27075fe4ba1445b895471250b4fb59
+      internalID: 198036635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kris_9
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 810
+        width: 19
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da5392d38b0794553b3acc6f9a6d94dc
+      internalID: -161531873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kris_10
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 810
+        width: 19
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd337bd71259a4b4fae45517f529ecd5
+      internalID: -1704995970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kris_11
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 810
+        width: 19
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf21a795f6e114e5db332ae8de2927e6
+      internalID: 622065887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kris_12
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 766
+        width: 19
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c30213170f7f247218ee606e34de9423
+      internalID: 96323626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kris_13
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 765
+        width: 19
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b958d2e215e6545b3be25d1a82f832ca
+      internalID: -91088151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kris_14
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 766
+        width: 19
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3d9549ae6cf2411d982b0e0bbbf85a2
+      internalID: -21215121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kris_15
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 765
+        width: 19
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5619fddafe93c45189dbc5aa8278acff
+      internalID: -120984386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kris_16
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 713
+        width: 34
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff75387b0e1fe49eb8cd06486893f55f
+      internalID: -361954358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kris_17
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 713
+        width: 35
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f726f81e7c6f84bc3a86a8a0ca88e3c3
+      internalID: 1868943991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kris_18
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 713
+        width: 36
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57608f1ee460f4af2ac8cc8693f1486d
+      internalID: 230879076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kris_19
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 713
+        width: 36
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 786d8d6447f7b444ebf795401a3273df
+      internalID: -1860654952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kris_20
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 713
+        width: 36
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f48bf4b1481bc48c1ab215ea9e435bee
+      internalID: -1046471717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kris_21
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 712
+        width: 35
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5870fdf891a2e47b5919637f88a41300
+      internalID: -568598783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kris_22
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 647
+        width: 63
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1839fa1412b0d4ac6a825ce04a858234
+      internalID: 54031990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kris_23
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 647
+        width: 63
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc0eb9ed8bf4940a9a88a3035ad26884
+      internalID: -1221091839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kris_24
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 647
+        width: 63
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 762c155502b0d4802a06e106c193b9b5
+      internalID: -1650023611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kris_25
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 647
+        width: 63
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7be621d94f3d94b73804fd583cce7850
+      internalID: 1166984627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kris_26
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 647
+        width: 63
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa7f6d285df9c4b638442c4f13eb18cb
+      internalID: -1502509528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kris_27
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 647
+        width: 63
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 653121c5d1a9e45c9a55794df3876c5d
+      internalID: -1252507447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kris_28
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 647
+        width: 63
+        height: 50
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5972baa50997456c8ad35de1ae9d414
+      internalID: 1306563339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kris_29
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 647
+        width: 63
+        height: 50
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 605b289bc1cc4457881eaf54a6ff0354
+      internalID: -674949040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kris_30
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 583
+        width: 62
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b17fcf7496b1243b597c861845a871d9
+      internalID: 1169125755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kris_31
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 583
+        width: 62
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04256758416fc487880bcf96253b35b6
+      internalID: 786778638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kris_32
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 583
+        width: 63
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4698ba1917c7419c8dfb3fe9a7e28e6
+      internalID: 1926658671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kris_33
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 583
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74119802b166d49a18ac305f98f69c4b
+      internalID: 1847951492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kris_34
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 519
+        width: 63
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2800d1ced1ddc4ac3b65b2f2c72484b6
+      internalID: -196883276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kris_35
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 519
+        width: 63
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 406a66c7690364f52ba5b241984ae310
+      internalID: 1466541921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kris_36
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 519
+        width: 63
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eac3097c4ed9e4b1faa7953a93e5b0d7
+      internalID: 1806280280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kris_37
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 519
+        width: 63
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e1f0715bf4ae46c0bd4fbaa0f2dc2d8
+      internalID: -463687616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kris_38
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 519
+        width: 63
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bff2aebf3a264e73b41616230e6d3ac
+      internalID: -1494244501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kris_40
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 519
+        width: 63
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a31659500885486db9258aa38b7351a
+      internalID: -1816823726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kris_41
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 519
+        width: 63
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ad7a8904dac6473f9616e468a5035b7
+      internalID: -1973403461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kris_42
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 519
+        width: 63
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3684d24b0c11543bfb94ea5d6d725cfb
+      internalID: 1363242626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kris_43
+      rect:
+        serializedVersion: 2
+        x: 557
+        y: 519
+        width: 63
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cec9a254e0b34709916381884f6beb8
+      internalID: 111058004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kris_44
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 519
+        width: 63
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7c86ad12643c40058f377ec773bddb5
+      internalID: -2029104113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kris_45
+      rect:
+        serializedVersion: 2
+        x: 691
+        y: 519
+        width: 63
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 049dd188ab4634d7a88ee22368a84e93
+      internalID: -1553568930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kris_48
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 455
+        width: 63
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ec2ef902c8d54002bd51d8254cd11c8
+      internalID: -337197651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kris_49
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 455
+        width: 63
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bf5c6016112644649ecd0f13107e73c
+      internalID: -1472045520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kris_50
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 455
+        width: 63
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3b0b550f76f548bcb6957e1004b1c0d
+      internalID: -1863341423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kris_52
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 455
+        width: 63
+        height: 44
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e38d8346d9a284fed84abe242d33acef
+      internalID: -1042022376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kris_54
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 455
+        width: 63
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d23fcea0f9d704fc98d568c537294229
+      internalID: -1409736168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kris_56
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 455
+        width: 63
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e298788f1dc34da68d7f90b42b6522c
+      internalID: 116234756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kris_57
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 455
+        width: 63
+        height: 44
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7795d5d551274536984d609ce3b5b28
+      internalID: 2001703771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kris_58
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 455
+        width: 63
+        height: 44
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 512ccb537274d4b908ba71ed8fb0cbf4
+      internalID: -2041522850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kris_59
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 393
+        width: 35
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca054dbfb88b741f18627d34fa8ffbc6
+      internalID: -1632454931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kris_60
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 393
+        width: 35
+        height: 44
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a648ee7c416ff452dba29d46b525fd65
+      internalID: 1151829948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kris_61
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 393
+        width: 35
+        height: 44
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8c8338b1087a4a049739cf7d41fe815
+      internalID: 1502749342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kris_62
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 393
+        width: 35
+        height: 44
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9f733ce56ec8472cb86605797c0cf92
+      internalID: 446771660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kris_63
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 393
+        width: 35
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7843c84d5f9b84f65bdb2df4bc80b160
+      internalID: 1077826892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kris_64
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 393
+        width: 35
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f5ce954008384bf492a6592b5825bef
+      internalID: -717023484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kris_65
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 336
+        width: 34
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08df307002a064416a00dfc56f0831a6
+      internalID: -1453538248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kris_66
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 337
+        width: 34
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7616435670c31467a8ecb2beea6e8524
+      internalID: 364291296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kris_67
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 337
+        width: 34
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd9c7bbd9000e40088fd021a1f128dd0
+      internalID: -1017750551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kris_68
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 337
+        width: 34
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d863e3e2a784415c94fcdd48329cd5e
+      internalID: -1605751258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kris_69
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 337
+        width: 34
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b30e16cf97f674dc7bbc963b3a013a55
+      internalID: -1280851834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kris_70
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 337
+        width: 34
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f16cadbf25f2452c98c358cc04be15f
+      internalID: -2013781218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kris_71
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 337
+        width: 34
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c60ceb92d16d4543bdc71597d84aeb6
+      internalID: 828205005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kris_72
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 337
+        width: 34
+        height: 38
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2020a84800edf454bbd24b902ce267b4
+      internalID: 369528215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kris_73
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 337
+        width: 34
+        height: 38
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44211af81fdbe4c53bd9af2da4099221
+      internalID: -1504539648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kris_39
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 519
+        width: 63
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 582542bf2910e4e46b93e6876d70c5ec
+      internalID: 1443181599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kris_46
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 519
+        width: 63
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3eb2e1c62771441e2bdcf9403b7f9ec0
+      internalID: -1488957524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kris_47
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 519
+        width: 63
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4867a42fd66a40b8bda53632f45c6ee
+      internalID: 1792499847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: cc216edf02f36436c8ffcba855f30e2a
     internalID: 0
     vertices: []
     indices: 
@@ -147,7 +1687,90 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      519: -1973403461
+      kris_0: -9033173044817784723
+      kris_1: 1003046048
+      kris_10: -1704995970
+      kris_11: 622065887
+      kris_12: 96323626
+      kris_13: -91088151
+      kris_14: -21215121
+      kris_15: -120984386
+      kris_16: -361954358
+      kris_17: 1868943991
+      kris_18: 230879076
+      kris_19: -1860654952
+      kris_2: -342919003
+      kris_20: -1046471717
+      kris_21: -568598783
+      kris_22: 54031990
+      kris_23: -1221091839
+      kris_24: -1650023611
+      kris_25: 1166984627
+      kris_26: -1502509528
+      kris_27: -1252507447
+      kris_28: 1306563339
+      kris_29: -674949040
+      kris_3: 963474094
+      kris_30: 1169125755
+      kris_31: 786778638
+      kris_32: 1926658671
+      kris_33: 1847951492
+      kris_34: -196883276
+      kris_35: 1466541921
+      kris_36: 1806280280
+      kris_37: -463687616
+      kris_38: -1494244501
+      kris_39: 1443181599
+      kris_4: -1377681200
+      kris_40: -1816823726
+      kris_42: 1363242626
+      kris_43: 111058004
+      kris_44: -2029104113
+      kris_45: -1553568930
+      kris_46: -1488957524
+      kris_47: 1792499847
+      kris_48: -337197651
+      kris_49: -1472045520
+      kris_5: -835487875
+      kris_50: -1863341423
+      kris_51: -1665661681
+      kris_52: -1042022376
+      kris_53: 802789936
+      kris_54: -1409736168
+      kris_55: -1182307029
+      kris_56: 116234756
+      kris_57: 2001703771
+      kris_58: -2041522850
+      kris_59: -1632454931
+      kris_6: 637220759
+      kris_60: 1151829948
+      kris_61: 1502749342
+      kris_62: 446771660
+      kris_63: 1077826892
+      kris_64: -717023484
+      kris_65: -1453538248
+      kris_66: 364291296
+      kris_67: -1017750551
+      kris_68: -1605751258
+      kris_69: -1280851834
+      kris_7: 1774169561
+      kris_70: -2013781218
+      kris_71: 828205005
+      kris_72: 369528215
+      kris_73: -1504539648
+      kris_74: 1109969788
+      kris_75: -1627697336
+      kris_76: 1178393179
+      kris_77: -628759968
+      kris_78: 1339782987
+      kris_79: -1142530023
+      kris_8: 198036635
+      kris_80: 978734436
+      kris_81: 915721135
+      kris_82: 2067800947
+      kris_9: -161531873
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
