@@ -468,10 +468,10 @@ TextureImporter:
       name: kris_16
       rect:
         serializedVersion: 2
-        x: 11
+        x: 9
         y: 713
-        width: 34
-        height: 37
+        width: 36
+        height: 38
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -490,10 +490,10 @@ TextureImporter:
       name: kris_17
       rect:
         serializedVersion: 2
-        x: 51
+        x: 50
         y: 713
-        width: 35
-        height: 37
+        width: 36
+        height: 38
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -515,7 +515,7 @@ TextureImporter:
         x: 91
         y: 713
         width: 36
-        height: 37
+        height: 38
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -578,10 +578,10 @@ TextureImporter:
       name: kris_21
       rect:
         serializedVersion: 2
-        x: 215
-        y: 712
-        width: 35
-        height: 39
+        x: 214
+        y: 713
+        width: 36
+        height: 38
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -622,7 +622,7 @@ TextureImporter:
       name: kris_23
       rect:
         serializedVersion: 2
-        x: 78
+        x: 77
         y: 647
         width: 63
         height: 50
@@ -644,7 +644,7 @@ TextureImporter:
       name: kris_24
       rect:
         serializedVersion: 2
-        x: 147
+        x: 145
         y: 647
         width: 63
         height: 50
@@ -666,7 +666,7 @@ TextureImporter:
       name: kris_25
       rect:
         serializedVersion: 2
-        x: 214
+        x: 213
         y: 647
         width: 63
         height: 50
@@ -688,7 +688,7 @@ TextureImporter:
       name: kris_26
       rect:
         serializedVersion: 2
-        x: 282
+        x: 281
         y: 647
         width: 63
         height: 50
@@ -710,7 +710,7 @@ TextureImporter:
       name: kris_27
       rect:
         serializedVersion: 2
-        x: 351
+        x: 349
         y: 647
         width: 63
         height: 50
@@ -732,12 +732,12 @@ TextureImporter:
       name: kris_28
       rect:
         serializedVersion: 2
-        x: 422
+        x: 417
         y: 647
         width: 63
         height: 50
-      alignment: 1
-      pivot: {x: 0, y: 1}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -754,12 +754,12 @@ TextureImporter:
       name: kris_29
       rect:
         serializedVersion: 2
-        x: 490
+        x: 485
         y: 647
         width: 63
         height: 50
-      alignment: 1
-      pivot: {x: 0, y: 1}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1176,8 +1176,8 @@ TextureImporter:
         y: 455
         width: 63
         height: 44
-      alignment: 1
-      pivot: {x: 0, y: 1}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1242,8 +1242,8 @@ TextureImporter:
         y: 455
         width: 63
         height: 44
-      alignment: 1
-      pivot: {x: 0, y: 1}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1264,8 +1264,8 @@ TextureImporter:
         y: 455
         width: 63
         height: 44
-      alignment: 1
-      pivot: {x: 0, y: 1}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1308,8 +1308,8 @@ TextureImporter:
         y: 393
         width: 35
         height: 44
-      alignment: 1
-      pivot: {x: 0, y: 1}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1330,8 +1330,8 @@ TextureImporter:
         y: 393
         width: 35
         height: 44
-      alignment: 1
-      pivot: {x: 0, y: 1}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1352,8 +1352,8 @@ TextureImporter:
         y: 393
         width: 35
         height: 44
-      alignment: 1
-      pivot: {x: 0, y: 1}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1415,9 +1415,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 9
-        y: 336
+        y: 337
         width: 34
-        height: 38
+        height: 37
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1439,7 +1439,7 @@ TextureImporter:
         x: 48
         y: 337
         width: 34
-        height: 38
+        height: 37
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1461,7 +1461,7 @@ TextureImporter:
         x: 88
         y: 337
         width: 34
-        height: 38
+        height: 37
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1483,7 +1483,7 @@ TextureImporter:
         x: 128
         y: 337
         width: 34
-        height: 38
+        height: 37
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1502,10 +1502,10 @@ TextureImporter:
       name: kris_69
       rect:
         serializedVersion: 2
-        x: 168
+        x: 165
         y: 337
-        width: 34
-        height: 38
+        width: 35
+        height: 37
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1524,10 +1524,10 @@ TextureImporter:
       name: kris_70
       rect:
         serializedVersion: 2
-        x: 208
+        x: 204
         y: 337
-        width: 34
-        height: 38
+        width: 35
+        height: 37
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1546,10 +1546,10 @@ TextureImporter:
       name: kris_71
       rect:
         serializedVersion: 2
-        x: 248
+        x: 245
         y: 337
         width: 34
-        height: 38
+        height: 37
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1568,12 +1568,12 @@ TextureImporter:
       name: kris_72
       rect:
         serializedVersion: 2
-        x: 286
+        x: 283
         y: 337
         width: 34
-        height: 38
-      alignment: 1
-      pivot: {x: 0, y: 1}
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1590,12 +1590,12 @@ TextureImporter:
       name: kris_73
       rect:
         serializedVersion: 2
-        x: 324
+        x: 321
         y: 337
         width: 34
-        height: 38
-      alignment: 1
-      pivot: {x: 0, y: 1}
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
