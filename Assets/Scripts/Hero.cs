@@ -1,4 +1,5 @@
 using System;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -17,14 +18,20 @@ enum Direction
 
 public class Hero : MonoBehaviour
 {
-    public HeroState state = HeroState.Idle;
-    Direction direction = Direction.Down;
-
-    [SerializeField] float speed;
-    Animator animator;
-
     float horizontal;
     float vertical;
+    bool isRunning = false;
+    Direction direction = Direction.Down;
+
+    public HeroState state = HeroState.Idle;
+
+    [SerializeField] float speed;
+    [SerializeField] float deltaSpeed = 0.5f;
+    [SerializeField] float minSpeed = 2f;
+    [SerializeField] float maxSpeed = 8f;
+
+    Animator animator;
+
 
     #region PLAYER_INPUT
     public void MoveInput(InputAction.CallbackContext context)
@@ -32,10 +39,30 @@ public class Hero : MonoBehaviour
         horizontal = context.ReadValue<Vector2>().x;
         vertical = context.ReadValue<Vector2>().y;
     }
+    public void RunInput(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            isRunning = true;
+        }
+        else if (context.canceled)
+        {
+            isRunning = false;
+        }
+    }
     #endregion
 
     void Move()
     {
+        if (isRunning)
+        {
+            speed = (float)math.min(speed + deltaSpeed, maxSpeed);
+        }
+        else
+        {
+            speed = (float)math.max(speed - deltaSpeed, minSpeed);
+        }
+
         Vector2 movement = new Vector2(horizontal, vertical).normalized;
 
         if (movement == Vector2.zero)
@@ -48,22 +75,22 @@ public class Hero : MonoBehaviour
         state = HeroState.Walk;
         animator.speed = speed;
         transform.position += (Vector3)(speed * Time.deltaTime * movement);
-        if (movement.y > 0)
+
+        if (movement.x > 0)
+        {
+            direction = Direction.Right;
+        }
+        else if (movement.x < 0)
+        {
+            direction = Direction.Left;
+        }
+        else if (movement.y > 0)
         {
             direction = Direction.Up;
         }
         else if (movement.y < 0)
         {
             direction = Direction.Down;
-
-        }
-        else if (movement.x < 0)
-        {
-            direction = Direction.Left;
-        }
-        else if (movement.x > 0)
-        {
-            direction = Direction.Right;
         }
     }
     void Animate()
@@ -76,11 +103,6 @@ public class Hero : MonoBehaviour
     {
         animator = GetComponentInParent<Animator>();
     }
-
-    // void Start()
-    // {
-
-    // }
 
     // Update is called once per frame
     void Update()
