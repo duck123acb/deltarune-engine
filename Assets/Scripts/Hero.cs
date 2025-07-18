@@ -1,5 +1,4 @@
 using System;
-using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -54,27 +53,23 @@ public class Hero : MonoBehaviour
 
     void Move()
     {
-        if (isRunning)
-        {
-            speed = (float)math.min(speed + deltaSpeed, maxSpeed);
-        }
-        else
-        {
-            speed = (float)math.max(speed - deltaSpeed, minSpeed);
-        }
-
         Vector2 movement = new Vector2(horizontal, vertical).normalized;
 
         if (movement == Vector2.zero)
         {
             state = HeroState.Idle;
             animator.speed = 1;
+            speed = minSpeed;
             return;
         }
 
         state = HeroState.Walk;
         animator.speed = speed;
         transform.position += (Vector3)(speed * Time.deltaTime * movement);
+        if (isRunning)
+            speed = Mathf.Min(speed + deltaSpeed, maxSpeed);
+        else
+            speed = Mathf.Max(speed - deltaSpeed, minSpeed);
 
         if (movement.x > 0)
         {

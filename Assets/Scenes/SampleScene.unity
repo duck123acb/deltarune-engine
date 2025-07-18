@@ -3245,7 +3245,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state: 0
   speed: 2
-  deltaSpeed: 0.5
+  deltaSpeed: 0.25
   minSpeed: 2
   maxSpeed: 5
 --- !u!114 &1719577466
