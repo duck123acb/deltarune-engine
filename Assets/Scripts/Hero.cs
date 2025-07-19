@@ -82,6 +82,7 @@ public class Hero : MonoBehaviour
         animator.Play(animation);
     }
 
+    #region UNITY_FUNCTIONS
     void Awake()
     {
         animator = GetComponentInParent<Animator>();
@@ -92,4 +93,5 @@ public class Hero : MonoBehaviour
         Move();
         Animate();
     }
+    #endregion
 }
