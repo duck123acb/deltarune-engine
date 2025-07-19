@@ -41,13 +41,9 @@ public class Hero : MonoBehaviour
     public void RunInput(InputAction.CallbackContext context)
     {
         if (context.started)
-        {
             isRunning = true;
-        }
         else if (context.canceled)
-        {
             isRunning = false;
-        }
     }
     #endregion
 
@@ -72,21 +68,13 @@ public class Hero : MonoBehaviour
             speed = Mathf.Max(speed - deltaSpeed, minSpeed);
 
         if (movement.x > 0)
-        {
             direction = Direction.Right;
-        }
         else if (movement.x < 0)
-        {
             direction = Direction.Left;
-        }
         else if (movement.y > 0)
-        {
             direction = Direction.Up;
-        }
         else if (movement.y < 0)
-        {
             direction = Direction.Down;
-        }
     }
     void Animate()
     {
