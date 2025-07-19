@@ -87,7 +87,6 @@ public class Hero : MonoBehaviour
         animator = GetComponentInParent<Animator>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         Move();
