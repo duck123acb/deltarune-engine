@@ -29,6 +29,10 @@ public class Hero : MonoBehaviour
     [SerializeField] float minSpeed = 2f;
     [SerializeField] float maxSpeed = 8f;
 
+    [SerializeField] LayerMask collisionMask;
+    Vector2 boxSize = new Vector2(1f, 1f);
+
+
     Animator animator;
 
 
@@ -61,8 +65,29 @@ public class Hero : MonoBehaviour
 
         state = HeroState.Walk;
         animator.speed = speed;
-        transform.position += (Vector3)(speed * Time.deltaTime * movement);
-        if (isRunning)
+
+        Vector2 moveDelta = speed * Time.deltaTime * movement;
+        Vector2 targetPos = (Vector2)transform.position + moveDelta;
+
+        
+        RaycastHit2D hit = Physics2D.BoxCast(transform.position, boxSize, 0f, movement, moveDelta.magnitude, collisionMask);
+
+        if (hit.collider != null)
+        {
+            float safeDistance = Mathf.Max(0f, hit.distance - 0.01f); // leave a tiny gap
+            transform.position += (Vector3)(movement * safeDistance);
+
+            state = HeroState.Idle;
+            return;
+        }
+        
+        transform.position = targetPos;
+
+        if (state == HeroState.Idle)
+        {
+            speed = minSpeed;
+        }
+        else if (isRunning)
             speed = Mathf.Min(speed + deltaSpeed, maxSpeed);
         else
             speed = Mathf.Max(speed - deltaSpeed, minSpeed);
@@ -85,6 +110,7 @@ public class Hero : MonoBehaviour
     #region UNITY_FUNCTIONS
     void Awake()
     {
+        boxSize = GetComponent<BoxCollider2D>().size;
         animator = GetComponentInParent<Animator>();
     }
 
