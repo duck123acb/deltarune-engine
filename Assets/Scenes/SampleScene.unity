@@ -3578,7 +3578,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91eee894f09764f0ea995d457c269dcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isSolid: 1
+  lines:
+  - speaker: 0
+    speakerData: {fileID: 0}
+    text: '* Hey Kris its me the Roaring Beer'
 --- !u!1 &2094815759
 GameObject:
   m_ObjectHideFlags: 0
