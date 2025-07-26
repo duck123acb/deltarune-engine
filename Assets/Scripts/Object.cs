@@ -2,11 +2,13 @@ using UnityEngine;
 
 public class Object : MonoBehaviour
 {
-    public bool isSolid = true;
+    public DialogueLine[] lines;
 
     public void Interact()
     {
-        // get from a new Data component ??????
-        Debug.Log("DRIVING IN MY CAR RIGHT AFTER A BEER");
+        foreach (DialogueLine dialogueLine in lines)
+        {
+
+        }
     }
 }
