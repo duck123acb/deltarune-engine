@@ -4,9 +4,7 @@ public enum Speaker
 {
     Narrator,
     Susie,
-    Ralsei,
-    Toriel,
-    Asgore
+    Ralsei
 }
 
 [System.Serializable]
@@ -14,6 +12,6 @@ public class DialogueLine
 {
     public Speaker speaker = Speaker.Narrator;
     public SpeakerData speakerData;
-    [TextArea]
+    // [TextArea]
     public string text;
 }

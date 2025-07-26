@@ -8,7 +8,12 @@ public class Object : MonoBehaviour
     {
         foreach (DialogueLine dialogueLine in lines)
         {
-
+            Debug.Log(dialogueLine.text);
         }
+    }
+
+    void Start()
+    {
+        Interact();
     }
 }

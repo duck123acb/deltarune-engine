@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEditor;
+using System.Linq;
 
 [CustomPropertyDrawer(typeof(DialogueLine))]
 public class DialogueLineDrawer : PropertyDrawer
@@ -8,20 +9,16 @@ public class DialogueLineDrawer : PropertyDrawer
     {
         EditorGUI.BeginProperty(position, label, property);
 
-        // text label
-        Rect textLabelRect = new(position.x, position.y, position.width, EditorGUIUtility.singleLineHeight);
-        EditorGUI.LabelField(textLabelRect, "Text");
-
-        // textbox
-        SerializedProperty textProp = property.FindPropertyRelative("text");
+        SerializedProperty lineProp = property.FindPropertyRelative("text");
         position.height = EditorGUIUtility.singleLineHeight * 4;
-        EditorGUI.PropertyField(position, textProp, GUIContent.none);
+        EditorGUI.PropertyField(position, lineProp, new GUIContent("Text"));
 
         EditorGUI.EndProperty();
     }
 
     public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
     {
-        return EditorGUIUtility.singleLineHeight * 8;
+        // Only need one line height
+        return EditorGUIUtility.singleLineHeight * 5;
     }
 }
