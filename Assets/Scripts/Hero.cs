@@ -17,8 +17,6 @@ enum Direction
 
 public class Hero : MonoBehaviour
 {
-    float horizontal;
-    float vertical;
     bool isRunning = false;
     Direction direction = Direction.Down;
 
@@ -29,18 +27,19 @@ public class Hero : MonoBehaviour
     [SerializeField] float minSpeed = 2f;
     [SerializeField] float maxSpeed = 8f;
 
-    [SerializeField] LayerMask collisionMask;
-    Vector2 boxSize = new Vector2(1f, 1f);
-
-
     Animator animator;
+    Rigidbody2D rb;
+
+    Vector2 moveInput;
+    Vector2 lastPos;
 
 
     #region PLAYER_INPUT
     public void MoveInput(InputAction.CallbackContext context)
     {
-        horizontal = context.ReadValue<Vector2>().x;
-        vertical = context.ReadValue<Vector2>().y;
+        Vector2 input = context.ReadValue<Vector2>();
+        moveInput = input.normalized;
+
     }
     public void RunInput(InputAction.CallbackContext context)
     {
@@ -51,38 +50,39 @@ public class Hero : MonoBehaviour
     }
     #endregion
 
+    void SetIdleState()
+    {
+        state = HeroState.Idle;
+        animator.speed = 1;
+        speed = minSpeed;
+    }
+
     void Move()
     {
-        Vector2 movement = new Vector2(horizontal, vertical).normalized;
-
-        if (movement == Vector2.zero)
+        if (moveInput == Vector2.zero)
         {
-            state = HeroState.Idle;
-            animator.speed = 1;
-            speed = minSpeed;
+            SetIdleState();
             return;
         }
+
+
+        Vector2 moveDelta = speed * Time.fixedDeltaTime * moveInput;
+        rb.MovePosition(rb.position + moveDelta);
+
+        // bool blocked = Vector2.Distance(actualPos, currentPos) > 0.01f;
+        bool blocked = rb.position == lastPos;
+
+        if (blocked)
+        {
+            SetIdleState();
+            return;
+        }
+
+        lastPos = rb.position;
 
         state = HeroState.Walk;
         animator.speed = speed;
-
-        Vector2 moveDelta = speed * Time.deltaTime * movement;
-        Vector2 targetPos = (Vector2)transform.position + moveDelta;
-
-        
-        RaycastHit2D hit = Physics2D.BoxCast(transform.position, boxSize, 0f, movement, moveDelta.magnitude, collisionMask);
-
-        if (hit.collider != null)
-        {
-            float safeDistance = Mathf.Max(0f, hit.distance - 0.01f); // leave a tiny gap
-            transform.position += (Vector3)(movement * safeDistance);
-
-            state = HeroState.Idle;
-            return;
-        }
-        
-        transform.position = targetPos;
-
+        // SHOULDN'T need this but lets see
         if (state == HeroState.Idle)
         {
             speed = minSpeed;
@@ -92,13 +92,18 @@ public class Hero : MonoBehaviour
         else
             speed = Mathf.Max(speed - deltaSpeed, minSpeed);
 
-        if (movement.x > 0)
+        // if (isRunning)
+        //     speed = Mathf.Min(speed + deltaSpeed, maxSpeed);
+        // else
+        //     speed = Mathf.Max(speed - deltaSpeed, minSpeed);
+
+        if (moveInput.x > 0)
             direction = Direction.Right;
-        else if (movement.x < 0)
+        else if (moveInput.x < 0)
             direction = Direction.Left;
-        else if (movement.y > 0)
+        else if (moveInput.y > 0)
             direction = Direction.Up;
-        else if (movement.y < 0)
+        else if (moveInput.y < 0)
             direction = Direction.Down;
     }
     void Animate()
@@ -110,13 +115,16 @@ public class Hero : MonoBehaviour
     #region UNITY_FUNCTIONS
     void Awake()
     {
-        boxSize = GetComponent<BoxCollider2D>().size;
         animator = GetComponentInParent<Animator>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         Move();
+    }
+    void Update()
+    {
         Animate();
     }
     #endregion
