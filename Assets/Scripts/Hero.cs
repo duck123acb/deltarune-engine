@@ -27,28 +27,21 @@ public class Hero : MonoBehaviour
     [SerializeField] float minSpeed = 2f;
     [SerializeField] float maxSpeed = 8f;
 
+    [SerializeField] Vector2 downTriggerOffset = new(0f, -0.04f);
+    [SerializeField] Vector2 upTriggerOffset = new(0f, 0.04f);
+    [SerializeField] Vector2 leftTriggerOffset = new(-0.04f, 0f);
+    [SerializeField] Vector2 rightTriggerOffset = new(0.04f, 0f);
+
+    [SerializeField] BoxCollider2D triggerCollider;
+
     Animator animator;
     Rigidbody2D rb;
 
     Vector2 moveInput;
     Vector2 lastPos;
 
+    IntractableObject intractableObject = null;
 
-    #region PLAYER_INPUT
-    public void MoveInput(InputAction.CallbackContext context)
-    {
-        Vector2 input = context.ReadValue<Vector2>();
-        moveInput = input.normalized;
-
-    }
-    public void RunInput(InputAction.CallbackContext context)
-    {
-        if (context.started)
-            isRunning = true;
-        else if (context.canceled)
-            isRunning = false;
-    }
-    #endregion
 
     void SetIdleState()
     {
@@ -57,6 +50,24 @@ public class Hero : MonoBehaviour
         speed = minSpeed;
     }
 
+    void ShiftTriggerCollider()
+    {
+        switch (direction)
+        {
+            case Direction.Down:
+                triggerCollider.offset = downTriggerOffset;
+                break;
+            case Direction.Up:
+                triggerCollider.offset = upTriggerOffset;
+                break;
+            case Direction.Left:
+                triggerCollider.offset = leftTriggerOffset;
+                break;
+            case Direction.Right:
+                triggerCollider.offset = rightTriggerOffset;
+                break;
+        }
+    }
     void Move()
     {
         if (moveInput == Vector2.zero)
@@ -65,11 +76,9 @@ public class Hero : MonoBehaviour
             return;
         }
 
-
         Vector2 moveDelta = speed * Time.fixedDeltaTime * moveInput;
         rb.MovePosition(rb.position + moveDelta);
 
-        // bool blocked = Vector2.Distance(actualPos, currentPos) > 0.01f;
         bool blocked = rb.position == lastPos;
 
         if (blocked)
@@ -82,20 +91,11 @@ public class Hero : MonoBehaviour
 
         state = HeroState.Walk;
         animator.speed = speed;
-        // SHOULDN'T need this but lets see
-        if (state == HeroState.Idle)
-        {
-            speed = minSpeed;
-        }
-        else if (isRunning)
+
+        if (isRunning)
             speed = Mathf.Min(speed + deltaSpeed, maxSpeed);
         else
             speed = Mathf.Max(speed - deltaSpeed, minSpeed);
-
-        // if (isRunning)
-        //     speed = Mathf.Min(speed + deltaSpeed, maxSpeed);
-        // else
-        //     speed = Mathf.Max(speed - deltaSpeed, minSpeed);
 
         if (moveInput.x > 0)
             direction = Direction.Right;
@@ -105,15 +105,43 @@ public class Hero : MonoBehaviour
             direction = Direction.Up;
         else if (moveInput.y < 0)
             direction = Direction.Down;
+
+        ShiftTriggerCollider();
     }
+
     void Animate()
     {
         String animation = state.ToString() + direction.ToString();
         animator.Play(animation);
     }
 
-    #region UNITY_FUNCTIONS
-    void Awake()
+    #region PLAYER_INPUT
+    public void MoveInput(InputAction.CallbackContext context)
+    {
+        Vector2 input = context.ReadValue<Vector2>();
+        moveInput = input.normalized;
+    }
+    public void RunInput(InputAction.CallbackContext context)
+    {
+        if (context.started)
+            isRunning = true;
+        else if (context.canceled)
+            isRunning = false;
+    }
+
+    public void InteractInput(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            if (!context.started || intractableObject == null) return;
+
+            intractableObject.Interact();
+        }
+    }
+    #endregion
+
+        #region UNITY_FUNCTIONS
+        void Awake()
     {
         animator = GetComponentInParent<Animator>();
         rb = GetComponent<Rigidbody2D>();
@@ -126,6 +154,15 @@ public class Hero : MonoBehaviour
     void Update()
     {
         Animate();
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        collision.TryGetComponent(out intractableObject);
+    }
+    void OnTriggerExit2D(Collider2D collision)
+    {
+        intractableObject = null;
     }
     #endregion
 }

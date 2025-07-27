@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Object : MonoBehaviour
+public class IntractableObject : MonoBehaviour
 {
     public DialogueLine[] lines;
 
@@ -10,10 +10,5 @@ public class Object : MonoBehaviour
         {
             Debug.Log(dialogueLine.text);
         }
-    }
-
-    void Start()
-    {
-        Interact();
     }
 }

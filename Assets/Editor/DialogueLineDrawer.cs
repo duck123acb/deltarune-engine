@@ -11,7 +11,7 @@ public class DialogueLineDrawer : PropertyDrawer
 
         SerializedProperty lineProp = property.FindPropertyRelative("text");
         position.height = EditorGUIUtility.singleLineHeight * 4;
-        EditorGUI.PropertyField(position, lineProp, new GUIContent("Text"));
+        EditorGUI.PropertyField(position, lineProp);
 
         EditorGUI.EndProperty();
     }
