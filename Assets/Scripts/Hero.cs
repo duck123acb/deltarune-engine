@@ -17,8 +17,6 @@ enum Direction
 
 public class Hero : MonoBehaviour
 {
-    float horizontal;
-    float vertical;
     bool isRunning = false;
     Direction direction = Direction.Down;
 
@@ -29,14 +27,99 @@ public class Hero : MonoBehaviour
     [SerializeField] float minSpeed = 2f;
     [SerializeField] float maxSpeed = 8f;
 
-    Animator animator;
+    [SerializeField] Vector2 downTriggerOffset = new(0f, -0.04f);
+    [SerializeField] Vector2 upTriggerOffset = new(0f, 0.04f);
+    [SerializeField] Vector2 leftTriggerOffset = new(-0.04f, 0f);
+    [SerializeField] Vector2 rightTriggerOffset = new(0.04f, 0f);
 
+    [SerializeField] BoxCollider2D triggerCollider;
+
+    Animator animator;
+    Rigidbody2D rb;
+
+    Vector2 moveInput;
+    Vector2 lastPos;
+
+    IntractableObject intractableObject = null;
+
+
+    void SetIdleState()
+    {
+        state = HeroState.Idle;
+        animator.speed = 1;
+        speed = minSpeed;
+    }
+
+    void ShiftTriggerCollider()
+    {
+        switch (direction)
+        {
+            case Direction.Down:
+                triggerCollider.offset = downTriggerOffset;
+                break;
+            case Direction.Up:
+                triggerCollider.offset = upTriggerOffset;
+                break;
+            case Direction.Left:
+                triggerCollider.offset = leftTriggerOffset;
+                break;
+            case Direction.Right:
+                triggerCollider.offset = rightTriggerOffset;
+                break;
+        }
+    }
+    void Move()
+    {
+        if (moveInput == Vector2.zero)
+        {
+            SetIdleState();
+            return;
+        }
+
+        Vector2 moveDelta = speed * Time.fixedDeltaTime * moveInput;
+        rb.MovePosition(rb.position + moveDelta);
+
+        bool blocked = rb.position == lastPos;
+
+        if (blocked)
+        {
+            SetIdleState();
+            return;
+        }
+
+        lastPos = rb.position;
+
+        state = HeroState.Walk;
+        animator.speed = speed;
+
+        if (isRunning)
+            speed = Mathf.Min(speed + deltaSpeed, maxSpeed);
+        else
+            speed = Mathf.Max(speed - deltaSpeed, minSpeed);
+
+        if (moveInput.x > 0)
+            direction = Direction.Right;
+        else if (moveInput.x < 0)
+            direction = Direction.Left;
+        else if (moveInput.y > 0)
+            direction = Direction.Up;
+        else if (moveInput.y < 0)
+            direction = Direction.Down;
+
+        ShiftTriggerCollider();
+    }
+
+    void Animate()
+    {
+        String animation = state.ToString() + direction.ToString();
+        animator.Play(animation);
+    }
 
     #region PLAYER_INPUT
     public void MoveInput(InputAction.CallbackContext context)
     {
-        horizontal = context.ReadValue<Vector2>().x;
-        vertical = context.ReadValue<Vector2>().y;
+        Vector2 input = context.ReadValue<Vector2>();
+        moveInput = input.normalized;
     }
     public void RunInput(InputAction.CallbackContext context)
     {
@@ -45,51 +128,41 @@ public class Hero : MonoBehaviour
         else if (context.canceled)
             isRunning = false;
     }
+
+    public void InteractInput(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            if (!context.started || intractableObject == null) return;
+
+            intractableObject.Interact();
+        }
+    }
     #endregion
 
-    void Move()
-    {
-        Vector2 movement = new Vector2(horizontal, vertical).normalized;
-
-        if (movement == Vector2.zero)
-        {
-            state = HeroState.Idle;
-            animator.speed = 1;
-            speed = minSpeed;
-            return;
-        }
-
-        state = HeroState.Walk;
-        animator.speed = speed;
-        transform.position += (Vector3)(speed * Time.deltaTime * movement);
-        if (isRunning)
-            speed = Mathf.Min(speed + deltaSpeed, maxSpeed);
-        else
-            speed = Mathf.Max(speed - deltaSpeed, minSpeed);
-
-        if (movement.x > 0)
-            direction = Direction.Right;
-        else if (movement.x < 0)
-            direction = Direction.Left;
-        else if (movement.y > 0)
-            direction = Direction.Up;
-        else if (movement.y < 0)
-            direction = Direction.Down;
-    }
-    void Animate()
-    {
-        String animation = state.ToString() + direction.ToString();
-        animator.Play(animation);
-    }
-
-    void Awake()
+        #region UNITY_FUNCTIONS
+        void Awake()
     {
         animator = GetComponentInParent<Animator>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         Move();
+    }
+    void Update()
+    {
         Animate();
     }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        collision.TryGetComponent(out intractableObject);
+    }
+    void OnTriggerExit2D(Collider2D collision)
+    {
+        intractableObject = null;
+    }
+    #endregion
 }
