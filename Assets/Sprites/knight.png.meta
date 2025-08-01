@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 5b9343c6053484e67b11cd8b87afc773
+guid: ea7267c8db25d456c9e51f7c84ec8078
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6401705097947235048
-    second: susie_0
+      213: 4495478712733764576
+    second: knight_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -72,10 +72,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -113,23 +113,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: susie_0
+      name: knight_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1559
-        height: 3584
+        x: 16
+        y: 2660
+        width: 71
+        height: 82
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 81d3c0091239827a0800000000000000
-      internalID: -6401705097947235048
+      spriteID: 2f6efc91e3689449888e47de74de1318
+      internalID: 4495478712733764576
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: bb1dd780d113548049072293fc8bec2a
     internalID: 0
     vertices: []
     indices: 
@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      knight_0: 4495478712733764576
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

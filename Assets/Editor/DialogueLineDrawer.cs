@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEditor;
-using System.Linq;
 
 [CustomPropertyDrawer(typeof(DialogueLine))]
 public class DialogueLineDrawer : PropertyDrawer
@@ -9,16 +8,30 @@ public class DialogueLineDrawer : PropertyDrawer
     {
         EditorGUI.BeginProperty(position, label, property);
 
+        SerializedProperty speakerNameProp = property.FindPropertyRelative("speaker");
+        SerializedProperty portraitProp = property.FindPropertyRelative("portrait");
+        SerializedProperty voiceClipProp = property.FindPropertyRelative("voiceClip");
         SerializedProperty lineProp = property.FindPropertyRelative("text");
-        position.height = EditorGUIUtility.singleLineHeight * 4;
-        EditorGUI.PropertyField(position, lineProp);
+
+        float lineHeight = EditorGUIUtility.singleLineHeight + EditorGUIUtility.standardVerticalSpacing;
+        
+        Rect speakerRect = new Rect(position.x, position.y, position.width, EditorGUIUtility.singleLineHeight);
+        Rect portraitRect = new Rect(position.x, position.y + lineHeight, position.width, EditorGUIUtility.singleLineHeight);
+        Rect voiceClipRect = new Rect(position.x, position.y + lineHeight * 2, position.width, EditorGUIUtility.singleLineHeight);
+        Rect lineRect = new Rect(position.x, position.y + lineHeight * 3, position.width, EditorGUIUtility.singleLineHeight * 3);
+
+        EditorGUI.PropertyField(speakerRect, speakerNameProp);
+        EditorGUI.PropertyField(portraitRect, portraitProp);
+        EditorGUI.PropertyField(voiceClipRect, voiceClipProp);
+
+        lineProp.stringValue = EditorGUI.TextArea(lineRect, lineProp.stringValue);
 
         EditorGUI.EndProperty();
     }
 
     public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
     {
-        // Only need one line height
-        return EditorGUIUtility.singleLineHeight * 5;
+        // return EditorGUIUtility.singleLineHeight * 10;
+        return EditorGUIUtility.singleLineHeight * 6.2f + EditorGUIUtility.standardVerticalSpacing; // this crashed unity?????? uhh if it does it again ima tweak out
     }
 }

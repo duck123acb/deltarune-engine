@@ -4,13 +4,15 @@ public enum Speaker
 {
     Narrator,
     Susie,
-    Ralsei
+    // Ralsei,
+    // Knight // ??
 }
 
 [System.Serializable]
 public class DialogueLine
 {
     public Speaker speaker = Speaker.Narrator;
-    public SpeakerData speakerData;
+    public Sprite portrait;
+    public AudioClip voiceClip;
     public string text;
 }
