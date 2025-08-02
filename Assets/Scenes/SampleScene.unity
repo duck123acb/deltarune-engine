@@ -3210,7 +3210,7 @@ MonoBehaviour:
   lines:
   - speaker: 0
     portrait: {fileID: 0}
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: a47863de1886641ae8b947e4359d1869, type: 3}
     text: "* hey kris i befrended your\n  brother last knight im dess\n  'rory nite'
       holidy"
 --- !u!61 &1026687102
@@ -4051,7 +4051,7 @@ MonoBehaviour:
   lines:
   - speaker: 0
     portrait: {fileID: 0}
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: a47863de1886641ae8b947e4359d1869, type: 3}
     text: '* Hey Kris its me the Roaring Beer'
   - speaker: 0
     portrait: {fileID: 0}

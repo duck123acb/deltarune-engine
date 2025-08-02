@@ -2,7 +2,7 @@ using UnityEngine;
 
 public enum Speaker
 {
-    Narrator,
+    Default, // narrator
     Susie,
     // Ralsei,
     // Knight // ??
@@ -11,7 +11,7 @@ public enum Speaker
 [System.Serializable]
 public class DialogueLine
 {
-    public Speaker speaker = Speaker.Narrator;
+    public Speaker speaker = Speaker.Default;
     public Sprite portrait;
     public AudioClip voiceClip;
     public string text;

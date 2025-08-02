@@ -1,10 +1,11 @@
 using UnityEngine;
 using UnityEditor;
+using System.Linq;
 
 [CustomPropertyDrawer(typeof(DialogueLine))]
 public class DialogueLineDrawer : PropertyDrawer
 {
-    // private string lastSpeakerName = null;
+    private string lastSpeakerName = null;
 
     public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
     {
@@ -24,19 +25,18 @@ public class DialogueLineDrawer : PropertyDrawer
 
         EditorGUI.PropertyField(speakerRect, speakerNameProp);
 
-        /*
-        string speakerName = speakerProp.enumNames[speakerProp.enumValueIndex];
+        string speakerName = speakerNameProp.enumNames[speakerNameProp.enumValueIndex];
         if (lastSpeakerName != speakerName)
         {
-            Sprite portrait = Resources.Load<Sprite>($"Speakers/{speakerName}/portrait");
-            AudioClip clip = Resources.Load<AudioClip>($"Speakers/{speakerName}/voice");
+            Sprite[] sprites = Resources.LoadAll<Sprite>($"Speakers/{speakerName}/spritesheet");
+            Sprite portrait = sprites.FirstOrDefault(s => s.name == "default");
+            AudioClip clip = Resources.Load<AudioClip>($"Speakers/{speakerName}/speak");
 
             portraitProp.objectReferenceValue = portrait;
             voiceClipProp.objectReferenceValue = clip;
 
             lastSpeakerName = speakerName;
         }
-        */
 
         EditorGUI.PropertyField(portraitRect, portraitProp);
         EditorGUI.PropertyField(voiceClipRect, voiceClipProp);
