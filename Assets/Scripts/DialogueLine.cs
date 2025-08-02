@@ -2,15 +2,21 @@ using UnityEngine;
 
 public enum Speaker
 {
-    Narrator,
+    Default, // narrator
     Susie,
-    Ralsei
+    // Ralsei,
+    // Knight // ??
 }
 
 [System.Serializable]
 public class DialogueLine
 {
-    public Speaker speaker = Speaker.Narrator;
-    public SpeakerData speakerData;
+    public Speaker speaker = Speaker.Default;
+    public Sprite portrait;
+    public AudioClip voiceClip;
     public string text;
+    public int delayMS = 2000;
+    public bool done = false;
+
+    [HideInInspector] public Speaker lastSpeaker = Speaker.Default; // for the inspector
 }
