@@ -3213,6 +3213,9 @@ MonoBehaviour:
     voiceClip: {fileID: 8300000, guid: a47863de1886641ae8b947e4359d1869, type: 3}
     text: "* hey kris i befrended your\n  brother last knight im dess\n  'rory nite'
       holidy"
+    delayMS: 250
+    done: 0
+    lastSpeaker: 0
 --- !u!61 &1026687102
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4053,10 +4056,23 @@ MonoBehaviour:
     portrait: {fileID: 0}
     voiceClip: {fileID: 8300000, guid: a47863de1886641ae8b947e4359d1869, type: 3}
     text: '* Hey Kris its me the Roaring Beer'
-  - speaker: 0
-    portrait: {fileID: 0}
-    voiceClip: {fileID: 0}
-    text: '* Dont you ahve anything better to do?'
+    delayMS: 250
+    done: 0
+    lastSpeaker: 0
+  - speaker: 1
+    portrait: {fileID: 270884169, guid: 535bec28b37c64501b99db28475f310b, type: 3}
+    voiceClip: {fileID: 8300000, guid: 8f980f21b60104cfdb7ef70c574c3316, type: 3}
+    text: '* Kris...'
+    delayMS: 250
+    done: 0
+    lastSpeaker: 1
+  - speaker: 1
+    portrait: {fileID: 764911491, guid: 535bec28b37c64501b99db28475f310b, type: 3}
+    voiceClip: {fileID: 8300000, guid: 8f980f21b60104cfdb7ef70c574c3316, type: 3}
+    text: '* Isn''t this your dads?'
+    delayMS: 250
+    done: 0
+    lastSpeaker: 1
 --- !u!1 &2094815759
 GameObject:
   m_ObjectHideFlags: 0

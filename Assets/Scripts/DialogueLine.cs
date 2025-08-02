@@ -15,4 +15,8 @@ public class DialogueLine
     public Sprite portrait;
     public AudioClip voiceClip;
     public string text;
+    public int delayMS = 2000;
+    public bool done = false;
+
+    [HideInInspector] public Speaker lastSpeaker = Speaker.Default; // for the inspector
 }
