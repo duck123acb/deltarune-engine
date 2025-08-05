@@ -16,6 +16,7 @@ public class DialogueLine
     public AudioClip voiceClip;
     public string text;
     public int delayMS = 2000;
+    public int charsPerSound = 3;
     public bool done = false;
 
     [HideInInspector] public Speaker lastSpeaker = Speaker.Default; // for the inspector

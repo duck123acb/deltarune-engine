@@ -15,6 +15,7 @@ public class DialogueLineDrawer : PropertyDrawer
         SerializedProperty voiceClipProp = property.FindPropertyRelative("voiceClip");
         SerializedProperty lineProp = property.FindPropertyRelative("text");
         SerializedProperty delayProp = property.FindPropertyRelative("delayMS");
+        SerializedProperty charsPerSoundProp = property.FindPropertyRelative("charsPerSound");
 
         float lineHeight = EditorGUIUtility.singleLineHeight + EditorGUIUtility.standardVerticalSpacing;
 
@@ -23,8 +24,13 @@ public class DialogueLineDrawer : PropertyDrawer
         Rect voiceClipRect = new Rect(position.x, position.y + lineHeight * 2, position.width, EditorGUIUtility.singleLineHeight);
         Rect lineRect = new Rect(position.x, position.y + lineHeight * 3, position.width, EditorGUIUtility.singleLineHeight * 3);
         Rect delayRect = new Rect(position.x, position.y + lineHeight * 6, position.width, EditorGUIUtility.singleLineHeight);
+        Rect charsPerSoundRect = new Rect(position.x, position.y + lineHeight * 7, position.width, EditorGUIUtility.singleLineHeight);
 
         EditorGUI.PropertyField(speakerRect, speakerNameProp);
+        EditorGUI.PropertyField(portraitRect, portraitProp);
+        EditorGUI.PropertyField(voiceClipRect, voiceClipProp);
+        EditorGUI.PropertyField(delayRect, delayProp);
+        EditorGUI.PropertyField(charsPerSoundRect, charsPerSoundProp);
 
         Speaker currentSpeaker = (Speaker)speakerNameProp.enumValueIndex;
         Speaker lastSpeaker = (Speaker)lastSpeakerNameProp.enumValueIndex;
@@ -41,10 +47,6 @@ public class DialogueLineDrawer : PropertyDrawer
             lastSpeakerNameProp.enumValueIndex = speakerNameProp.enumValueIndex;
         }
 
-        EditorGUI.PropertyField(portraitRect, portraitProp);
-        EditorGUI.PropertyField(voiceClipRect, voiceClipProp);
-        EditorGUI.PropertyField(delayRect, delayProp);
-
         lineProp.stringValue = EditorGUI.TextArea(lineRect, lineProp.stringValue);
 
         EditorGUI.EndProperty();
@@ -53,6 +55,6 @@ public class DialogueLineDrawer : PropertyDrawer
     public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
     {
         // return EditorGUIUtility.singleLineHeight * 10; // debugging
-        return EditorGUIUtility.singleLineHeight * 7.5f + EditorGUIUtility.standardVerticalSpacing; // this crashed unity?????? uhh if it does it again ima tweak out
+        return EditorGUIUtility.singleLineHeight * 8.5f + EditorGUIUtility.standardVerticalSpacing; // this crashed unity?????? uhh if it does it again ima tweak out
     }
 }
