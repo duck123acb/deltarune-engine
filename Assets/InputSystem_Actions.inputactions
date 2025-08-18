@@ -251,7 +251,7 @@
                     "id": "d0448029-4f33-48e4-9e9f-c10c6129325c",
                     "expectedControlType": "",
                     "processors": "",
-                    "interactions": "Hold",
+                    "interactions": "Press",
                     "initialStateCheck": false
                 },
                 {

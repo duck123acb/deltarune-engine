@@ -47,7 +47,7 @@ public class Textbox : MonoBehaviour
         else
         {
             portraitImage.enabled = false;
-            // dialogueText.rectTransform.anchoredPosition = textPosWithoutPortrait;
+            dialogueText.rectTransform.anchoredPosition = textPosWithoutPortrait;
         }
 
         index = 0;

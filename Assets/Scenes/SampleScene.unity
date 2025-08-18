@@ -4175,7 +4175,7 @@ MonoBehaviour:
     portrait: {fileID: 0}
     voiceClip: {fileID: 8300000, guid: a47863de1886641ae8b947e4359d1869, type: 3}
     text: '* Hey Kris its me the Roaring Beer'
-    delayMS: 250
+    delayMS: 30
     charsPerSound: 3
     done: 0
     lastSpeaker: 0
@@ -4183,7 +4183,7 @@ MonoBehaviour:
     portrait: {fileID: 270884169, guid: 535bec28b37c64501b99db28475f310b, type: 3}
     voiceClip: {fileID: 8300000, guid: 8f980f21b60104cfdb7ef70c574c3316, type: 3}
     text: '* Kris...'
-    delayMS: 250
+    delayMS: 30
     charsPerSound: 3
     done: 0
     lastSpeaker: 1
@@ -4191,7 +4191,7 @@ MonoBehaviour:
     portrait: {fileID: 764911491, guid: 535bec28b37c64501b99db28475f310b, type: 3}
     voiceClip: {fileID: 8300000, guid: 8f980f21b60104cfdb7ef70c574c3316, type: 3}
     text: '* Isn''t this your dads?'
-    delayMS: 250
+    delayMS: 30
     charsPerSound: 3
     done: 0
     lastSpeaker: 1
