@@ -288,6 +288,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 420543197}
+  - {fileID: 1757530714}
   m_Father: {fileID: 698077740}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
@@ -345,6 +346,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b69206cb7b33444fb55210f37015ea3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDone: 0
+  textPosWithPortrait: {x: 0, y: 86}
+  textPosWithoutPortrait: {x: 36, y: 86}
+  portraitImage: {fileID: 1757530715}
 --- !u!1 &471533725
 GameObject:
   m_ObjectHideFlags: 0
@@ -741,6 +746,7 @@ GameObject:
   - component: {fileID: 698077739}
   - component: {fileID: 698077738}
   - component: {fileID: 698077737}
+  - component: {fileID: 698077741}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -832,6 +838,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &698077741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 698077736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e264df0fa60184fb8a44204e5aa5b224, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &904787596
 GameObject:
   m_ObjectHideFlags: 0
@@ -3226,7 +3244,8 @@ MonoBehaviour:
     voiceClip: {fileID: 8300000, guid: a47863de1886641ae8b947e4359d1869, type: 3}
     text: "* hey kris i befrended your\n  brother last knight im dess\n  'rory nite'
       holidy"
-    delayMS: 250
+    delayMS: 10
+    charsPerSound: 2
     done: 0
     lastSpeaker: 0
 --- !u!61 &1026687102
@@ -3760,7 +3779,19 @@ MonoBehaviour:
     m_ActionId: 1f5ab949-38d5-4f1c-af22-ed95a0684b25
     m_ActionName: 'Menu/Move[/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 427396375}
+        m_TargetAssemblyTypeName: Textbox, Assembly-CSharp
+        m_MethodName: AdvanceDialogueTrigger
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: d0448029-4f33-48e4-9e9f-c10c6129325c
     m_ActionName: 'Menu/Select[/Keyboard/z,/Keyboard/enter]'
   - m_PersistentCalls:
@@ -3917,6 +3948,81 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.15, y: 0.32}
   m_EdgeRadius: 0
+--- !u!1 &1757530713
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1757530714}
+  - component: {fileID: 1757530716}
+  - component: {fileID: 1757530715}
+  m_Layer: 5
+  m_Name: face
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1757530714
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1757530713}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 427396372}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1757530715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1757530713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1757530716
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1757530713}
+  m_CullTransparentMesh: 1
 --- !u!1 &1835518820
 GameObject:
   m_ObjectHideFlags: 0
@@ -4070,6 +4176,7 @@ MonoBehaviour:
     voiceClip: {fileID: 8300000, guid: a47863de1886641ae8b947e4359d1869, type: 3}
     text: '* Hey Kris its me the Roaring Beer'
     delayMS: 250
+    charsPerSound: 3
     done: 0
     lastSpeaker: 0
   - speaker: 1
@@ -4077,6 +4184,7 @@ MonoBehaviour:
     voiceClip: {fileID: 8300000, guid: 8f980f21b60104cfdb7ef70c574c3316, type: 3}
     text: '* Kris...'
     delayMS: 250
+    charsPerSound: 3
     done: 0
     lastSpeaker: 1
   - speaker: 1
@@ -4084,6 +4192,7 @@ MonoBehaviour:
     voiceClip: {fileID: 8300000, guid: 8f980f21b60104cfdb7ef70c574c3316, type: 3}
     text: '* Isn''t this your dads?'
     delayMS: 250
+    charsPerSound: 3
     done: 0
     lastSpeaker: 1
 --- !u!1 &2094815759
