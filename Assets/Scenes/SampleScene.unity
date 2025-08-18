@@ -153,8 +153,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 131.2, y: -52.5}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 200.2, y: -52.5}
+  m_SizeDelta: {x: 118, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &420543198
 MonoBehaviour:
@@ -176,8 +176,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "* Is that a cut on your face\n  or part of your eye? The gash\n  weaves
-    down as if <color=#ff0000>you</color> cry."
+  m_text: "* KRIS!! WHAT THE HELL IS\n  THIS??????"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e956e1a1cabc64f11b3de39d6c929c86, type: 2}
   m_sharedMaterial: {fileID: -7135531725458677284, guid: e956e1a1cabc64f11b3de39d6c929c86, type: 2}
@@ -242,7 +241,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -308.37216, w: 0}
+  m_margin: {x: 0, y: 0, z: -305.70004, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -346,9 +345,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b69206cb7b33444fb55210f37015ea3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDone: 0
-  textPosWithPortrait: {x: 0, y: 86}
-  textPosWithoutPortrait: {x: 36, y: 86}
+  textPosWithPortrait: {x: 200.2, y: -52.5}
+  textPosWithoutPortrait: {x: 131.2, y: -52.5}
+  textBoundsWithPortrait: {x: 118, y: 50}
+  textBoundsWithoutPortrait: {x: 200, y: 50}
   portraitImage: {fileID: 1757530715}
 --- !u!1 &471533725
 GameObject:
@@ -3244,10 +3244,18 @@ MonoBehaviour:
     voiceClip: {fileID: 8300000, guid: a47863de1886641ae8b947e4359d1869, type: 3}
     text: "* hey kris i befrended your\n  brother last knight im dess\n  'rory nite'
       holidy"
-    delayMS: 20
+    delayMS: 33
     charsPerSound: 2
     done: 0
     lastSpeaker: 0
+  - speaker: 1
+    portrait: {fileID: 1018363216, guid: 535bec28b37c64501b99db28475f310b, type: 3}
+    voiceClip: {fileID: 8300000, guid: 8f980f21b60104cfdb7ef70c574c3316, type: 3}
+    text: "* KRIS!! WHAT THE HELL IS\n  THIS??????????"
+    delayMS: 33
+    charsPerSound: 2
+    done: 0
+    lastSpeaker: 1
 --- !u!61 &1026687102
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3965,7 +3973,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1757530714
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3975,15 +3983,15 @@ RectTransform:
   m_GameObject: {fileID: 1757530713}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 427396372}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 77.3, y: -84.81}
+  m_SizeDelta: {x: 45, y: 51}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1757530715
 MonoBehaviour:
@@ -4005,7 +4013,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 1467046145, guid: 535bec28b37c64501b99db28475f310b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

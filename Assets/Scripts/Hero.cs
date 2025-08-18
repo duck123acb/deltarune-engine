@@ -183,8 +183,11 @@ public class Hero : MonoBehaviour
     void OnDisable()
     {
         TextboxManager textboxManager = FindAnyObjectByType<TextboxManager>();
-        textboxManager.StartedDialogue -= EnableMenuActionMap;
-        textboxManager.EndedDialogue -= EnablePlayerActionMap;
+        if (textboxManager)
+        {
+            textboxManager.StartedDialogue -= EnableMenuActionMap;
+            textboxManager.EndedDialogue -= EnablePlayerActionMap;
+        }
     }
     #endregion
 }

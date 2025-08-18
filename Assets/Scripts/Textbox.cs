@@ -8,9 +8,11 @@ public class Textbox : MonoBehaviour
 {
     public event Action OnFinishedLine;
 
-    public bool isDone = false;
+    bool isDone = false;
     [SerializeField] Vector2 textPosWithPortrait;
     [SerializeField] Vector2 textPosWithoutPortrait;
+    [SerializeField] Vector2 textBoundsWithPortrait;
+    [SerializeField] Vector2 textBoundsWithoutPortrait;
 
 
     DialogueLine currentLine;
@@ -42,12 +44,14 @@ public class Textbox : MonoBehaviour
         {
             portraitImage.enabled = true;
             dialogueText.rectTransform.anchoredPosition = textPosWithPortrait;
+            dialogueText.rectTransform.sizeDelta = textBoundsWithPortrait;
             portraitImage.sprite = line.portrait;
         }
         else
         {
             portraitImage.enabled = false;
             dialogueText.rectTransform.anchoredPosition = textPosWithoutPortrait;
+            dialogueText.rectTransform.sizeDelta = textBoundsWithoutPortrait;
         }
 
         index = 0;
