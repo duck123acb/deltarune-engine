@@ -119,10 +119,8 @@ public class Hero : MonoBehaviour
     }
     public void RunInput(InputAction.CallbackContext context)
     {
-        if (context.started)
-            isRunning = true;
-        else if (context.canceled)
-            isRunning = false;
+        if (context.started) isRunning = true;
+        else if (context.canceled) isRunning = false;
     }
 
     public void InteractInput(InputAction.CallbackContext context)
@@ -140,7 +138,7 @@ public class Hero : MonoBehaviour
     }
     void EnableMenuActionMap()
     {
-        playerInput.SwitchCurrentActionMap("Menu");
+        playerInput.SwitchCurrentActionMap("Dialogue");
     }
     #endregion
 

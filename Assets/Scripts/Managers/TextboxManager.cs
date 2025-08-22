@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class TextboxManager : MonoBehaviour
 {
@@ -56,13 +57,24 @@ public class TextboxManager : MonoBehaviour
         if (lines == null || currentIndex >= lines.Length)
         {
 
-            EndedDialogue?.Invoke();
-            textbox.gameObject.SetActive(false);
-            lines = null;
-            currentIndex = 0;
+            EndDialogue();
             return;
         }
 
         textbox.LoadLine(lines[currentIndex]);
+    }
+
+    void EndDialogue()
+    {
+        EndedDialogue?.Invoke();
+        textbox.gameObject.SetActive(false);
+        lines = null;
+        currentIndex = 0;
+    }
+
+    public void SkipDialogue(InputAction.CallbackContext context)
+    {
+        if (!context.performed) return;
+        EndDialogue();
     }
 }

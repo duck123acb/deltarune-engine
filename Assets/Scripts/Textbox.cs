@@ -90,10 +90,17 @@ public class Textbox : MonoBehaviour
     #region PLAYER_INPUT
     public void AdvanceDialogueTrigger(InputAction.CallbackContext context)
     {
-        if (context.performed && isDone)
-        { 
-            OnFinishedLine?.Invoke();
-        }
-   }
+        if (!context.performed || !isDone) return;
+        OnFinishedLine?.Invoke();
+    }
+
+    public void SkipLine(InputAction.CallbackContext context)
+    {
+        if (!context.performed) return;
+        dialogueText.text = currentLine.text;
+        index = currentLine.text.Length;
+        timer = 0;
+        isDone = true;
+    }
     #endregion
 }
