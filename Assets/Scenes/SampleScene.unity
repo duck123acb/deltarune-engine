@@ -153,8 +153,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 131.2, y: -52.5}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 200.2, y: -52.5}
+  m_SizeDelta: {x: 118, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &420543198
 MonoBehaviour:
@@ -176,8 +176,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "* Is that a cut on your face\n  or part of your eye? The gash\n  weaves
-    down as if <color=#ff0000>you</color> cry."
+  m_text: "* KRIS!! WHAT THE HELL IS\n  THIS??????"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e956e1a1cabc64f11b3de39d6c929c86, type: 2}
   m_sharedMaterial: {fileID: -7135531725458677284, guid: e956e1a1cabc64f11b3de39d6c929c86, type: 2}
@@ -242,7 +241,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -308.37216, w: 0}
+  m_margin: {x: 0, y: 0, z: -305.70004, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -267,6 +266,7 @@ GameObject:
   - component: {fileID: 427396372}
   - component: {fileID: 427396374}
   - component: {fileID: 427396373}
+  - component: {fileID: 427396375}
   m_Layer: 5
   m_Name: Textbox
   m_TagString: Untagged
@@ -287,6 +287,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 420543197}
+  - {fileID: 1757530714}
   m_Father: {fileID: 698077740}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
@@ -332,6 +333,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 427396371}
   m_CullTransparentMesh: 1
+--- !u!114 &427396375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 427396371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b69206cb7b33444fb55210f37015ea3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textPosWithPortrait: {x: 200.2, y: -52.5}
+  textPosWithoutPortrait: {x: 131.2, y: -52.5}
+  textBoundsWithPortrait: {x: 118, y: 50}
+  textBoundsWithoutPortrait: {x: 200, y: 50}
+  portraitImage: {fileID: 1757530715}
 --- !u!1 &471533725
 GameObject:
   m_ObjectHideFlags: 0
@@ -728,6 +746,7 @@ GameObject:
   - component: {fileID: 698077739}
   - component: {fileID: 698077738}
   - component: {fileID: 698077737}
+  - component: {fileID: 698077741}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -819,6 +838,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &698077741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 698077736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e264df0fa60184fb8a44204e5aa5b224, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &904787596
 GameObject:
   m_ObjectHideFlags: 0
@@ -875,7 +906,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a79bd91f002064c2c9637a84bca63b61, type: 2}
+  - {fileID: 2100000, guid: aaf36e833d47f4a7ca06f66caaf4d88b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3213,9 +3244,52 @@ MonoBehaviour:
     voiceClip: {fileID: 8300000, guid: a47863de1886641ae8b947e4359d1869, type: 3}
     text: "* hey kris i befrended your\n  brother last knight im dess\n  'rory nite'
       holidy"
-    delayMS: 250
+    delayMS: 33
+    charsPerSound: 2
     done: 0
     lastSpeaker: 0
+  - speaker: 1
+    portrait: {fileID: -1895149300, guid: 535bec28b37c64501b99db28475f310b, type: 3}
+    voiceClip: {fileID: 8300000, guid: 8f980f21b60104cfdb7ef70c574c3316, type: 3}
+    text: '* (Hey, uh, Kris...)'
+    delayMS: 33
+    charsPerSound: 1
+    done: 0
+    lastSpeaker: 1
+  - speaker: 1
+    portrait: {fileID: 1451794257, guid: 535bec28b37c64501b99db28475f310b, type: 3}
+    voiceClip: {fileID: 8300000, guid: 8f980f21b60104cfdb7ef70c574c3316, type: 3}
+    text: '* THIS???????
+
+      * IS NOELLE''S SISTER???'
+    delayMS: 33
+    charsPerSound: 1
+    done: 0
+    lastSpeaker: 1
+  - speaker: 0
+    portrait: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: a47863de1886641ae8b947e4359d1869, type: 3}
+    text: "* Hey don't be mean im going to\n  SWOON you if you keep this up"
+    delayMS: 33
+    charsPerSound: 2
+    done: 0
+    lastSpeaker: 0
+  - speaker: 1
+    portrait: {fileID: 143985452, guid: 535bec28b37c64501b99db28475f310b, type: 3}
+    voiceClip: {fileID: 8300000, guid: 8f980f21b60104cfdb7ef70c574c3316, type: 3}
+    text: '* ...'
+    delayMS: 33
+    charsPerSound: 1
+    done: 0
+    lastSpeaker: 1
+  - speaker: 1
+    portrait: {fileID: -105970110, guid: 535bec28b37c64501b99db28475f310b, type: 3}
+    voiceClip: {fileID: 8300000, guid: 8f980f21b60104cfdb7ef70c574c3316, type: 3}
+    text: "* (Kinda reminds me of the\n  knight...)"
+    delayMS: 33
+    charsPerSound: 1
+    done: 0
+    lastSpeaker: 1
 --- !u!61 &1026687102
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3340,6 +3414,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicSource: {fileID: 1078902635}
   sfxSource: {fileID: 1078902634}
+  musicVolume: 0.5
 --- !u!4 &1078902633
 Transform:
   m_ObjectHideFlags: 0
@@ -3549,6 +3624,186 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &1317213693
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1317213695}
+  - component: {fileID: 1317213694}
+  - component: {fileID: 1317213697}
+  - component: {fileID: 1317213696}
+  m_Layer: 0
+  m_Name: sus_0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &1317213694
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1317213693}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: -4301329749613159308, guid: a0fb118f4d26d4d43a84c00de6d59a99, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 5.76, y: 10.24}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &1317213695
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1317213693}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.23, y: -3.62, z: 0}
+  m_LocalScale: {x: 1.1151, y: 0.2232, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1317213696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1317213693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91eee894f09764f0ea995d457c269dcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lines:
+  - speaker: 1
+    portrait: {fileID: 270884169, guid: 535bec28b37c64501b99db28475f310b, type: 3}
+    voiceClip: {fileID: 8300000, guid: 8f980f21b60104cfdb7ef70c574c3316, type: 3}
+    text: '* Like, uh, hey, Kris...'
+    delayMS: 33
+    charsPerSound: 1
+    done: 0
+    lastSpeaker: 1
+  - speaker: 1
+    portrait: {fileID: 1351190612, guid: 535bec28b37c64501b99db28475f310b, type: 3}
+    voiceClip: {fileID: 8300000, guid: 8f980f21b60104cfdb7ef70c574c3316, type: 3}
+    text: "* WHERE THE HELL ARE\n  WE!?!?"
+    delayMS: 10
+    charsPerSound: 3
+    done: 0
+    lastSpeaker: 1
+  - speaker: 1
+    portrait: {fileID: -2104622290, guid: 535bec28b37c64501b99db28475f310b, type: 3}
+    voiceClip: {fileID: 8300000, guid: 8f980f21b60104cfdb7ef70c574c3316, type: 3}
+    text: "* Maybe we're in some sort\n  of..."
+    delayMS: 33
+    charsPerSound: 1
+    done: 0
+    lastSpeaker: 1
+  - speaker: 1
+    portrait: {fileID: 1341419485, guid: 535bec28b37c64501b99db28475f310b, type: 3}
+    voiceClip: {fileID: 8300000, guid: 8f980f21b60104cfdb7ef70c574c3316, type: 3}
+    text: '* Unity Recreation'
+    delayMS: 150
+    charsPerSound: 0
+    done: 0
+    lastSpeaker: 1
+--- !u!61 &1317213697
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1317213693}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.76, y: 10.24}
+    newSize: {x: 5.76, y: 10.24}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 5.76, y: 10.24}
+  m_EdgeRadius: 0
 --- !u!1 &1719577462
 GameObject:
   m_ObjectHideFlags: 0
@@ -3660,8 +3915,8 @@ MonoBehaviour:
   deltaSpeed: 0.25
   minSpeed: 3
   maxSpeed: 5
-  downTriggerOffset: {x: 0, y: -0.04}
-  upTriggerOffset: {x: 0, y: 0.04}
+  downTriggerOffset: {x: 0, y: -0.18}
+  upTriggerOffset: {x: 0, y: -0.03}
   leftTriggerOffset: {x: -0.04, y: 0}
   rightTriggerOffset: {x: 0.04, y: 0}
   triggerCollider: {fileID: 1719577470}
@@ -3747,15 +4002,51 @@ MonoBehaviour:
     m_ActionId: 1f5ab949-38d5-4f1c-af22-ed95a0684b25
     m_ActionName: 'Menu/Move[/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 427396375}
+        m_TargetAssemblyTypeName: Textbox, Assembly-CSharp
+        m_MethodName: AdvanceDialogueTrigger
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: d0448029-4f33-48e4-9e9f-c10c6129325c
     m_ActionName: 'Menu/Select[/Keyboard/z,/Keyboard/enter]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 427396375}
+        m_TargetAssemblyTypeName: Textbox, Assembly-CSharp
+        m_MethodName: SkipLine
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 3d091dac-d54a-4fc8-86d5-3b8e8ef6e746
     m_ActionName: 'Menu/Cancel[/Keyboard/x,/Keyboard/shift]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 698077741}
+        m_TargetAssemblyTypeName: TextboxManager, Assembly-CSharp
+        m_MethodName: SkipDialogue
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 0d4de9f1-4a67-4a2c-a74a-a7fd10f7b837
     m_ActionName: 'Menu/SkipText[/Keyboard/c,/Keyboard/ctrl]'
   m_NeverAutoSwitchControlSchemes: 0
@@ -3819,7 +4110,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.12}
+  m_Offset: {x: 0, y: -0.11}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -3892,7 +4183,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.15}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -3902,8 +4193,83 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.15, y: 0.32}
+  m_Size: {x: 0.15, y: 0.04}
   m_EdgeRadius: 0
+--- !u!1 &1757530713
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1757530714}
+  - component: {fileID: 1757530716}
+  - component: {fileID: 1757530715}
+  m_Layer: 5
+  m_Name: face
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1757530714
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1757530713}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 427396372}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 77.3, y: -84.81}
+  m_SizeDelta: {x: 45, y: 51}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1757530715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1757530713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 1467046145, guid: 535bec28b37c64501b99db28475f310b, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1757530716
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1757530713}
+  m_CullTransparentMesh: 1
 --- !u!1 &1835518820
 GameObject:
   m_ObjectHideFlags: 0
@@ -4055,22 +4421,18 @@ MonoBehaviour:
   - speaker: 0
     portrait: {fileID: 0}
     voiceClip: {fileID: 8300000, guid: a47863de1886641ae8b947e4359d1869, type: 3}
-    text: '* Hey Kris its me the Roaring Beer'
-    delayMS: 250
+    text: "* Hey Kris its me the Roaring\n                                               
+      \n  Beer"
+    delayMS: 20
+    charsPerSound: 3
     done: 0
     lastSpeaker: 0
   - speaker: 1
-    portrait: {fileID: 270884169, guid: 535bec28b37c64501b99db28475f310b, type: 3}
+    portrait: {fileID: 1018363216, guid: 535bec28b37c64501b99db28475f310b, type: 3}
     voiceClip: {fileID: 8300000, guid: 8f980f21b60104cfdb7ef70c574c3316, type: 3}
-    text: '* Kris...'
-    delayMS: 250
-    done: 0
-    lastSpeaker: 1
-  - speaker: 1
-    portrait: {fileID: 764911491, guid: 535bec28b37c64501b99db28475f310b, type: 3}
-    voiceClip: {fileID: 8300000, guid: 8f980f21b60104cfdb7ef70c574c3316, type: 3}
-    text: '* Isn''t this your dads?'
-    delayMS: 250
+    text: "* KRIS!! WHAT THE HELL IS\n  THIS??????????"
+    delayMS: 33
+    charsPerSound: 1
     done: 0
     lastSpeaker: 1
 --- !u!1 &2094815759
@@ -4238,3 +4600,4 @@ SceneRoots:
   - {fileID: 1038094222}
   - {fileID: 1835518822}
   - {fileID: 1026687100}
+  - {fileID: 1317213695}

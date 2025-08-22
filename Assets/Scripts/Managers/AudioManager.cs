@@ -8,6 +8,8 @@ public class AudioManager : MonoBehaviour
     public AudioSource musicSource;
     public AudioSource sfxSource;
 
+    [SerializeField] float musicVolume = 0.2f;
+
     void Awake()
     {
         if (instance == null)
@@ -19,6 +21,8 @@ public class AudioManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        musicSource.volume = musicVolume;
     }
 
     public void PlayMusic(AudioClip clip)

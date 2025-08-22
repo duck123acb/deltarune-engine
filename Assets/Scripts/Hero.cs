@@ -42,6 +42,7 @@ public class Hero : MonoBehaviour
 
     IntractableObject intractableObject = null;
 
+    PlayerInput playerInput;
 
     void SetIdleState()
     {
@@ -109,11 +110,6 @@ public class Hero : MonoBehaviour
         ShiftTriggerCollider();
     }
 
-    void Animate()
-    {
-        String animation = state.ToString() + direction.ToString();
-        animator.Play(animation);
-    }
 
     #region PLAYER_INPUT
     public void MoveInput(InputAction.CallbackContext context)
@@ -123,10 +119,8 @@ public class Hero : MonoBehaviour
     }
     public void RunInput(InputAction.CallbackContext context)
     {
-        if (context.started)
-            isRunning = true;
-        else if (context.canceled)
-            isRunning = false;
+        if (context.started) isRunning = true;
+        else if (context.canceled) isRunning = false;
     }
 
     public void InteractInput(InputAction.CallbackContext context)
@@ -138,24 +132,37 @@ public class Hero : MonoBehaviour
             intractableObject.Interact();
         }
     }
+    void EnablePlayerActionMap()
+    {
+        playerInput.SwitchCurrentActionMap("Player");
+    }
+    void EnableMenuActionMap()
+    {
+        playerInput.SwitchCurrentActionMap("Dialogue");
+    }
     #endregion
 
-        #region UNITY_FUNCTIONS
-        void Awake()
+    #region UNITY_FUNCTIONS
+    void Awake()
     {
         animator = GetComponentInParent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        playerInput = GetComponent<PlayerInput>();
+        EnablePlayerActionMap();
     }
-
     void FixedUpdate()
     {
         Move();
+    }
+    void Animate()
+    {
+        String animation = state.ToString() + direction.ToString();
+        animator.Play(animation);
     }
     void Update()
     {
         Animate();
     }
-
     void OnTriggerEnter2D(Collider2D collision)
     {
         collision.TryGetComponent(out intractableObject);
@@ -163,6 +170,22 @@ public class Hero : MonoBehaviour
     void OnTriggerExit2D(Collider2D collision)
     {
         intractableObject = null;
+    }
+    void OnEnable()
+    {
+        TextboxManager textboxManager = FindAnyObjectByType<TextboxManager>();
+        textboxManager.StartedDialogue += EnableMenuActionMap;
+        textboxManager.EndedDialogue += EnablePlayerActionMap;
+    }
+
+    void OnDisable()
+    {
+        TextboxManager textboxManager = FindAnyObjectByType<TextboxManager>();
+        if (textboxManager)
+        {
+            textboxManager.StartedDialogue -= EnableMenuActionMap;
+            textboxManager.EndedDialogue -= EnablePlayerActionMap;
+        }
     }
     #endregion
 }
